@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advenssz</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #080808;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        width: 100%;
+        height: 100%;
+        margin: 5vh auto;
+        width: 90vw;
+        height: 90vh;
+        position: relative;
+      }
+
+      @media screen and (min-width: 600px) {
+        .content {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .content {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+
+      .day {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: #222;
+        font-size: 4vw;
+        font-weight: 900;
+      }
+
+      .BURNING {
+        color: orange;
+      }
+      .today {
+        cursor: pointer;
+      }
+
+      .notification {
+        width: 90vw;
+        height: 90vh;
+        position: absolute;
+        background-color: firebrick;
+        border: 2vw solid red;
+        left: 5vw;
+        top: 5vh;
+        right: 5vw;
+        bottom: 5vh;
+        color: white;
+        font-size: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      h1 {
+        position: absolute;
+        pointer-events: none;
+        user-select: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15vw;
+        color: rgba(255, 150, 200, 0.1);
+        margin: 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Adventskalender</h1>
+    <div class="content">
+      <div class="day">1</div>
+      <div class="day">2</div>
+      <div class="day">3</div>
+      <div class="day">4</div>
+      <div class="day">5</div>
+      <div class="day">6</div>
+      <div class="day">7</div>
+      <div class="day">8</div>
+      <div class="day">9</div>
+      <div class="day">10</div>
+      <div class="day">11</div>
+      <div class="day">12</div>
+      <div class="day">13</div>
+      <div class="day">14</div>
+      <div class="day">15</div>
+      <div class="day">16</div>
+      <div class="day">17</div>
+      <div class="day">18</div>
+      <div class="day">neunzehn</div>
+      <div class="day">20</div>
+      <div class="day">21</div>
+      <div class="day">22</div>
+      <div class="day">23</div>
+      <div class="day">24</div>
+    </div>
+
+    <script>
+      const days = Array.from(document.querySelectorAll('.day'));
+      const today = new Date().getDate();
+
+      days.filter((day, index) => index < today).forEach((day) => day.classList.add('BURNING'));
+
+      const BELEIDIGUNGEN = [
+        'Du Sau',
+        'DU HUND',
+        'du Hundesohn',
+        'du Lustmolch',
+        'Sie Pisser',
+        'du gemeiner Mensch',
+        'du RechtssschreibfehlerKorrigierier',
+        'du Naziverteidiger',
+        'du undefinierbares Wesen',
+        'MANNOMANOONO',
+        'du geschmacksarmer Weichspüler',
+        'du talentfreier Talentscout',
+        'Sie ungehobelter Speichenlecker',
+        'Weihnachtsmann',
+        'du koffeinfreier Kaffee-Kaffeetrinker',
+        'du kannst mich mal',
+        'ich will nicht',
+        'mein lieber Herr Gesangsverein',
+        'du Messer mit Rechts-Halter',
+        'verflucht nocheins',
+        'beim Barte des Teutates',
+        'sie ludwidgs-lüsterner Pferdekopf',
+        'du Nadel-im-Heuhaufen-Suchender Pseudo-Gelehrter',
+        'bitte',
+      ];
+
+      const currentDay = days[today - 1];
+      currentDay.classList.add('today');
+      currentDay.addEventListener('click', () => {
+        const notification = document.createElement('div');
+        notification.classList.add('notification');
+        notification.innerHTML = 'Lass mich in Ruhe, ' + BELEIDIGUNGEN[today - 1];
+        document.documentElement.append(notification);
+      });
+    </script>
+  </body>
+</html>
