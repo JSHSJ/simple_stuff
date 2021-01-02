@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tag 1: Kääääääääääätzchen 1 (vermutlich)</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #fdf9f6;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+        min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        min-height: calc(var(--vh, 1vh) * 100);
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 0;
+      }
+
+      .cat {
+        flex: 0 0 80%;
+        padding: 5%;
+        height: auto;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .cat {
+          flex: 0 0 40%;
+        }
+      }
+
+      .whisker {
+        transform-origin: center center;
+        transform-box: fill-box;
+        animation: whisker 2s infinite ease-in-out;
+      }
+
+      .eye-open {
+        opacity: 0;
+      }
+
+      .eye-wide-open {
+        opacity: 0;
+      }
+
+      .eye-half-open {
+        opacity: 0;
+      }
+
+      @keyframes whisker {
+        0% {
+          transform: skew(0deg);
+        }
+
+        50% {
+          transform: skew(4deg) translateX(-1px);
+        }
+        100% {
+          transform: skew(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a
+      href="/"
+      style="
+        font-size: 1em;
+        color: pink;
+        font-family: sans-serif;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 12px;
+        display: block;
+        background-color: #000;
+      "
+      >Alles</a
+    >
+    <div class="container">
+      <div class="cat cat-mausi">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 504 271">
+          <g class="mausi-full">
+            <g class="mausi">
+              <path
+                stroke="#000"
+                d="M169.845 218.346c11.083-29.336 60.519-18.796 65.843-12.712l-7.823-53.457c6.194-21.404 32.857-59.193 40.419-53.456 7.562 5.736 28.467 36.833 35.203 53.456l-10.104 53.457c20.861-8.801 62.257-11.082 66.495 12.712"
+                class="Vector 3"
+              />
+              <path stroke="#333" d="M182.231 236.274c-46.068-27.598-92.832-56.782-123.863-60.954" class="whisker" />
+              <path stroke="#333" d="M183.535 241.815c-51.827-26.837-122.624-64.083-141.138-59.65" class="whisker" />
+              <path stroke="#333" d="M183.535 248.147C126.276 222.506 9.605 173.829 1 184.26" class="whisker" />
+              <path stroke="#333" d="M177.342 254.527c-56.716-20.969-143.486-50.588-147.658-41.722" class="whisker" />
+              <path stroke="#333" d="M343.906 238.74c47.046-18.036 113.758-46.47 129.404-41.255" class="whisker" />
+              <path stroke="#333" d="M345.209 245.259c42.592-12.495 131.426-37.029 147.333-27.38" class="whisker" />
+              <path stroke="#333" d="M345.209 250.474c9.127 0 108.544-32.595 157.763-20.535" class="whisker" />
+              <path stroke="#333" d="M345.209 256.015c22.817 1.63 110.5-17.133 123.538-6.377" class="whisker" />
+              <path
+                fill="#000"
+                fill-rule="evenodd"
+                d="M264.08 231.36l-42.734-3.561-19.883 9.453c-.978 7.823 19.778 23.717 34.551 24.772 3.109.222 5.831.512 8.216.765 5.908.628 9.749 1.036 12.276-.341 4.81 3.501 9.883 6.277 14.25 7.553l.209.062.187-.112c6.775-4.041 12.721-12.167 16.547-19.657 1.917-3.753 3.317-7.376 4.027-10.288.354-1.455.541-2.752.526-3.81-.015-1.034-.225-1.949-.785-2.513-.273-.275-.657-.501-1.102-.693-.45-.195-.994-.369-1.614-.524-1.239-.31-2.823-.557-4.657-.747-3.67-.381-8.392-.539-13.472-.504-2.133.015-4.33.064-6.542.145zm-6.694 30.49c.555-.461 1.032-1.047 1.445-1.781l13.281-27.858c4.49.003 8.616.164 11.879.503 1.811.187 3.343.428 4.517.722a9.652 9.652 0 011.46.471c.39.169.643.334.789.481.278.28.481.858.495 1.823.014.941-.154 2.148-.498 3.558-.686 2.817-2.053 6.366-3.945 10.07-3.756 7.352-9.52 15.202-15.982 19.14-4.105-1.239-8.875-3.841-13.441-7.129z"
+                class="Union"
+                clip-rule="evenodd"
+              />
+              <path
+                stroke="#000"
+                d="M131.724 98.135C126.624 76.549 134.264 1 142.572 1c16.412 0 69.727 34.797 87.901 60.849"
+                class="Vector 27"
+              />
+              <path
+                stroke="#000"
+                d="M417.926 111.825c4.967-21.296-2.475-95.831-10.567-95.831-15.986 0-67.916 34.33-85.618 60.032"
+                class="Vector 28"
+              />
+            </g>
+            <g class="eye-open">
+              <g class="Vector 11">
+                <path
+                  fill="url(#paint0_radial)"
+                  d="M161 162.596c0-23.928 43.888-6.201 61.3 11.688 0 4.448 1.544 8.613-1.431 10.972-14.414 11.426-59.869 8.201-59.869-22.66z"
+                />
+                <path
+                  stroke="#000"
+                  d="M222.3 174.284c-17.412-17.889-61.3-35.616-61.3-11.688 0 30.861 45.455 34.086 59.869 22.66 2.975-2.359 1.431-6.524 1.431-10.972zm0 0c1.113 5.168.859 14.927-.477 15.118"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M189 170.512c0 6.488 1.703 12.133 2.164 12.133.336 0 2.305-5.21 2.336-12.133.026-5.803-.5-10.012-2.336-14.512-1.664 4.5-2.164 9.5-2.164 14.512z"
+                class="Vector 5"
+              />
+            </g>
+            <g class="eye-wide-open">
+              <g class="Vector 11_2">
+                <path
+                  fill="url(#paint1_radial)"
+                  d="M161 162.596c0-23.928 43.888-6.201 61.3 11.688 0 4.448 1.544 8.613-1.431 10.972-14.414 11.426-59.869 8.201-59.869-22.66z"
+                />
+                <path
+                  stroke="#000"
+                  d="M222.3 174.284c-17.412-17.889-61.3-35.616-61.3-11.688 0 30.861 45.455 34.086 59.869 22.66 2.975-2.359 1.431-6.524 1.431-10.972zm0 0c1.113 5.168.859 14.927-.477 15.118"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M201.072 169.843c-.477 6.44-5.123 10.809-9.129 12.165-4.229 1.431-10.405-5.224-10.43-12.165-.021-5.818 2.624-12.164 10.43-14.55 6.505 3.101 9.129 9.303 9.129 14.55z"
+                class="Vector 5_2"
+              />
+            </g>
+            <g class="eye-wide-open">
+              <g class="Vector 11_3">
+                <path
+                  fill="url(#paint2_radial)"
+                  d="M367.434 168.076c3.14-23.89-44.195-6.245-61.729 11.769 0 4.48-1.555 8.673 1.441 11.049 14.514 11.507 56.354 7.106 60.288-22.818z"
+                />
+                <path
+                  stroke="#000"
+                  d="M305.705 179.845c17.534-18.014 64.869-35.659 61.729-11.769-3.934 29.924-45.774 34.325-60.288 22.818-2.996-2.376-1.441-6.569-1.441-11.049zm0 0c-1.121 5.204-.865 15.032.48 15.224"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M328 176.512c.584 6.424 2.765 10.781 7.664 12.133 5.173 1.428 8.351-5.21 8.382-12.133.026-5.803-3.209-11.886-8.382-14.512-5.913 3.501-7.664 9.278-7.664 14.512z"
+                class="Vector 5_3"
+              />
+            </g>
+            <g class="eye-open">
+              <g class="Vector 11_4">
+                <path
+                  fill="url(#paint3_radial)"
+                  d="M365.852 167.478c3.112-23.668-43.783-6.187-61.154 11.66 0 4.438-1.54 8.592 1.428 10.946 14.379 11.399 55.829 7.04 59.726-22.606z"
+                />
+                <path
+                  stroke="#000"
+                  d="M304.698 179.138c17.371-17.847 64.266-35.328 61.154-11.66-3.897 29.646-45.347 34.005-59.726 22.606-2.968-2.354-1.428-6.508-1.428-10.946zm0 0c-1.11 5.155-.856 14.892.476 15.082"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M332.235 175.836c0 6.427 1.687 12.02 2.144 12.02.333 0 2.283-5.161 2.314-12.02.026-5.75-.496-9.919-2.314-14.377-1.649 4.458-2.144 9.411-2.144 14.377z"
+                class="Vector 5_4"
+              />
+            </g>
+            <g class="eye-half-open">
+              <g class="Vector 13">
+                <path
+                  fill="url(#paint4_radial)"
+                  d="M166.399 162.383c-12.087-16.116 58.151 17.379 56.814 17.601 0 0 .223 1.56-.668 2.006-12.7 3.342-46.788-7.13-56.146-19.607z"
+                />
+                <path
+                  stroke="#000"
+                  d="M223.213 179.984c1.337-.222-68.901-33.717-56.814-17.601 9.358 12.477 43.446 22.949 56.146 19.607.891-.446.668-2.006.668-2.006zm0 0c.223 1.114-.222 7.848-.668 8.516"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M194.938 172.017c-1.187 6.791-3.167 4.669-3.563 4.669-.791 0-2.375-2.547-2.375-6.367 0-3.396 2.455-4.652 3.563-4.245 1.178.432 2.771 2.122 2.375 5.943z"
+                class="Vector 14"
+              />
+            </g>
+            <g class="eye-half-open">
+              <g class="Vector 13_2">
+                <path
+                  fill="url(#paint5_radial)"
+                  d="M365.776 169.83c4.595-13.784-63.081 14.052-61.715 14.28 0 0-.228 1.592.682 2.047 12.968 3.413 56.123-1.596 61.033-16.327z"
+                />
+                <path
+                  stroke="#000"
+                  d="M304.061 184.11c-1.366-.228 66.31-28.064 61.715-14.28-4.91 14.731-48.065 19.74-61.033 16.327-.91-.455-.682-2.047-.682-2.047zm0 0c-.228 1.137.227 8.012.682 8.695"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M332.591 179.02c1.531 8.169 4.084 5.616 4.594 5.616 1.022 0 3.064-3.063 3.064-7.658 0-4.084-3.166-5.595-4.595-5.106-1.519.52-3.574 2.553-3.063 7.148z"
+                class="Vector 14_2"
+              />
+            </g>
+            <g class="eye-closed">
+              <path
+                fill="#000"
+                d="M171.628 163.405c26.586 6.229 45.507 12.552 50.883 17.905 0 2.434-3.262-1.389-18.571-7.786-11.241-4.697-65.545-17.906-32.312-10.119z"
+              />
+              <path
+                stroke="#000"
+                d="M223 185.69s0-.486-.057-2.333c-.057-1.847-.432-2.047-.432-2.047m0 0c-5.376-5.353-24.297-11.676-50.883-17.905-33.233-7.787 21.071 5.422 32.312 10.119 15.309 6.397 18.571 10.22 18.571 7.786z"
+              />
+            </g>
+            <g class="eye-closed">
+              <path
+                fill="#000"
+                d="M355.372 168.405c-26.586 6.229-45.507 12.552-50.883 17.905 0 2.434 3.262-1.389 18.571-7.786 11.241-4.697 65.545-17.906 32.312-10.119z"
+              />
+              <path
+                stroke="#000"
+                d="M304 190.69s0-.486.057-2.333c.057-1.847.432-2.047.432-2.047m0 0c5.376-5.353 24.297-11.676 50.883-17.905 33.233-7.787-21.071 5.422-32.312 10.119-15.309 6.397-18.571 10.22-18.571 7.786z"
+              />
+            </g>
+          </g>
+          <defs>
+            <radialGradient
+              id="paint0_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="paint0_radial"
+              gradientTransform="matrix(0 20.1596 -31 0 192 171.16)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#BCEA01" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="paint1_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="paint1_radial"
+              gradientTransform="matrix(0 20.1596 -31 0 192 171.16)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#BCEA01" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="paint2_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="paint2_radial"
+              gradientTransform="matrix(0 20.1266 -31.2914 0 336.291 176.616)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#BCEA01" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="paint3_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="paint3_radial"
+              gradientTransform="matrix(0 19.9392 -31 0 335 175.939)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#BCEA01" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="paint4_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="paint4_radial"
+              gradientTransform="matrix(0 15.25 -29.1363 0 194.136 173.25)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#BCEA01" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="paint5_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="paint5_radial"
+              gradientTransform="matrix(0 13.4025 -31 0 335 179.402)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#BCEA01" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="cat cat-luna">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 570 286">
+          <g class="luna-full">
+            <g class="luna">
+              <path stroke="#333" d="M374 257.535c57.888-22.192 139.975-57.179 159.226-50.762" class="whisker" />
+              <path stroke="#333" d="M375.604 265.557c52.407-15.375 161.713-45.562 181.286-33.691" class="whisker" />
+              <path stroke="#333" d="M375.604 271.974c11.23 0 133.558-40.107 194.12-25.268" class="whisker" />
+              <path stroke="#333" d="M375.203 284.611c50.535-3.476 155.697-8.904 172.061-2.808" class="whisker" />
+              <path stroke="#333" d="M375.604 278.792c28.075 2.005 135.964-21.082 152.007-7.847" class="whisker" />
+              <path
+                stroke="#333"
+                d="M110.5 234.5c32.437-16.163 50.018-26.848 79.303-48.198 31.301-22.821 74.6-65.375 74.6-65.375l39.305 61.765 29.278-18.048s64.514 87.356 74.6 87.033"
+                class="Vector 7"
+              />
+              <path
+                stroke="#333"
+                d="M282.312 251.183c-2.697-3.126-29.849-4.542-43.109-3.027-9.178 6.091 10.493 27.721 23.453 32.516 12.007-6.065 22.353-26.364 19.656-29.489z"
+                class="Vector 20"
+              />
+              <path stroke="#333" d="M181.348 246.446c-39.038-18.182-120.884-58.397-135.964-52.942" class="whisker" />
+              <path stroke="#333" d="M181.749 257.676c-48.396-18.45-148.317-53.824-160.83-47.728" class="whisker" />
+              <path stroke="#333" d="M178.14 264.494c-42.514-14.706-128.424-30.562-135.162-19.652" class="whisker" />
+              <path stroke="#333" d="M179.744 273.719c-48.53-9.893-148.96-29.038-162.435-26.471" class="whisker" />
+              <path stroke="#333" d="M179.744 279.735c-62.3-9.225-185.216-23.904-178.478-8.824" class="whisker" />
+              <path
+                stroke="#333"
+                d="M120 110l-15.221-52.676s-3.212-66.124 3.212-55.58c6.425 10.542 93.844 61.47 93.844 71.739"
+                class="Vector 29"
+              />
+              <path
+                stroke="#333"
+                d="M445.847 108.5l3.315-49.78s3.315-66.124-3.315-55.581C439.217 13.682 349 64.61 349 74.879"
+                class="Vector 30"
+              />
+            </g>
+            <g class="eye-open">
+              <g class="Vector 11">
+                <path
+                  fill="url(#luna0_radial)"
+                  d="M152 147.596c0-23.928 43.888-6.201 61.3 11.688 0 4.448 1.544 8.613-1.431 10.972-14.414 11.426-59.869 8.201-59.869-22.66z"
+                />
+                <path
+                  stroke="#000"
+                  d="M213.3 159.284c-17.412-17.889-61.3-35.616-61.3-11.688 0 30.861 45.455 34.086 59.869 22.66 2.975-2.359 1.431-6.524 1.431-10.972zm0 0c1.113 5.168.859 14.927-.477 15.118"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M180 155.512c0 6.488 1.703 12.133 2.164 12.133.336 0 2.305-5.21 2.336-12.133.026-5.803-.5-10.012-2.336-14.512-1.664 4.5-2.164 9.5-2.164 14.512z"
+                class="Vector 5"
+              />
+            </g>
+            <g class="eye-wide-open">
+              <g class="Vector 11_2">
+                <path
+                  fill="url(#luna1_radial)"
+                  d="M152 147.596c0-23.928 43.888-6.201 61.3 11.688 0 4.448 1.544 8.613-1.431 10.972-14.414 11.426-59.869 8.201-59.869-22.66z"
+                />
+                <path
+                  stroke="#000"
+                  d="M213.3 159.284c-17.412-17.889-61.3-35.616-61.3-11.688 0 30.861 45.455 34.086 59.869 22.66 2.975-2.359 1.431-6.524 1.431-10.972zm0 0c1.113 5.168.859 14.927-.477 15.118"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M192.072 154.843c-.477 6.44-5.123 10.809-9.129 12.165-4.229 1.431-10.405-5.224-10.43-12.165-.021-5.818 2.624-12.164 10.43-14.55 6.505 3.101 9.129 9.303 9.129 14.55z"
+                class="Vector 5_2"
+              />
+            </g>
+            <g class="eye-wide-open">
+              <g class="Vector 11_3">
+                <path
+                  fill="url(#luna2_radial)"
+                  d="M365.852 151.841c-3.352-19.978-43.783-6.187-61.154 11.659 0 4.439-1.54 8.593 1.428 10.946 14.379 11.4 64.698 7.024 59.726-22.605z"
+                />
+                <path
+                  stroke="#000"
+                  d="M304.698 163.5c17.371-17.846 57.802-31.637 61.154-11.659 4.972 29.629-45.347 34.005-59.726 22.605-2.968-2.353-1.428-6.507-1.428-10.946zm0 0c-1.11 5.156-.856 14.892.476 15.083"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M327 160.502c.582 6.701 2.757 11.247 7.642 12.657 5.158 1.489 8.327-5.435 8.358-12.657.026-6.054-4-14.139-8.358-15.139-6.142 3-7.642 9.679-7.642 15.139z"
+                class="Vector 5_3"
+              />
+            </g>
+            <g class="eye-open">
+              <g class="Vector 11_4">
+                <path
+                  fill="url(#luna3_radial)"
+                  d="M365.852 151.841c-3.352-19.978-43.783-6.187-61.154 11.659 0 4.439-1.54 8.593 1.428 10.946 14.379 11.4 64.698 7.024 59.726-22.605z"
+                />
+                <path
+                  stroke="#000"
+                  d="M304.698 163.5c17.371-17.846 57.802-31.637 61.154-11.659 4.972 29.629-45.347 34.005-59.726 22.605-2.968-2.353-1.428-6.507-1.428-10.946zm0 0c-1.11 5.156-.856 14.892.476 15.083"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M331 161.377c0 6.427 1.688 12.02 2.144 12.02.333 0 2.284-5.161 2.314-12.02.026-5.749-.495-9.919-2.314-14.377-1.649 4.458-2.144 9.412-2.144 14.377z"
+                class="Vector 5_4"
+              />
+            </g>
+            <g class="eye-half-open">
+              <g class="Vector 13">
+                <path
+                  fill="url(#luna4_radial)"
+                  d="M157.399 145.383c-12.087-16.116 58.151 17.379 56.814 17.601 0 0 .223 1.56-.668 2.006-12.7 3.342-46.788-7.13-56.146-19.607z"
+                />
+                <path
+                  stroke="#000"
+                  d="M214.213 162.984c1.337-.222-68.901-33.717-56.814-17.601 9.358 12.477 43.446 22.949 56.146 19.607.891-.446.668-2.006.668-2.006zm0 0c.223 1.114-.222 7.848-.668 8.516"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M185.938 155.017c-1.187 6.791-3.167 4.669-3.563 4.669-.791 0-2.375-2.547-2.375-6.367 0-3.396 2.455-4.652 3.563-4.245 1.178.432 2.771 2.122 2.375 5.943z"
+                class="Vector 14"
+              />
+            </g>
+            <g class="eye-half-open">
+              <g class="Vector 13_2">
+                <path
+                  fill="url(#luna5_radial)"
+                  d="M365.776 152.83c0-8.33-63.081 14.052-61.715 14.28 0 0-.228 1.592.682 2.047 12.968 3.413 61.033-.799 61.033-16.327z"
+                />
+                <path
+                  stroke="#000"
+                  d="M304.061 167.11c-1.366-.228 61.715-22.61 61.715-14.28 0 15.528-48.065 19.74-61.033 16.327-.91-.455-.682-2.047-.682-2.047zm0 0c-.228 1.137.227 8.012.682 8.695"
+                />
+              </g>
+              <path
+                fill="#000"
+                stroke="#000"
+                d="M333.072 163.017c1.386 6.791 3.695 4.669 4.157 4.669.923 0 2.771-2.547 2.771-6.367 0-3.396-2.864-4.652-4.157-4.245-1.374.432-3.233 2.122-2.771 5.943z"
+                class="Vector 14_2"
+              />
+            </g>
+            <g class="eye-closed">
+              <path
+                fill="#000"
+                d="M162.628 146.405c26.586 6.229 45.507 12.552 50.883 17.905 0 2.434-3.262-1.389-18.571-7.786-11.241-4.697-65.545-17.906-32.312-10.119z"
+              />
+              <path
+                stroke="#000"
+                d="M214 168.69s0-.486-.057-2.333c-.057-1.847-.432-2.047-.432-2.047m0 0c-5.376-5.353-24.297-11.676-50.883-17.905-33.233-7.787 21.071 5.422 32.312 10.119 15.309 6.397 18.571 10.22 18.571 7.786z"
+              />
+            </g>
+            <g class="eye-closed">
+              <path
+                fill="#000"
+                d="M355.372 152.405c-26.586 6.229-45.507 12.552-50.883 17.905 0 2.434 3.262-1.389 18.571-7.786 11.241-4.697 65.545-17.906 32.312-10.119z"
+              />
+              <path
+                stroke="#000"
+                d="M304 174.69s0-.486.057-2.333c.057-1.847.432-2.047.432-2.047m0 0c5.376-5.353 24.297-11.676 50.883-17.905 33.233-7.787-21.071 5.422-32.312 10.119-15.309 6.397-18.571 10.22-18.571 7.786z"
+              />
+            </g>
+          </g>
+          <defs>
+            <radialGradient
+              id="luna0_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="luna0_radial"
+              gradientTransform="matrix(0 20.1596 -31 0 183 156.16)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#EAB701" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="luna1_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="luna1_radial"
+              gradientTransform="matrix(0 20.1596 -31 0 183 156.16)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#EAB701" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="luna2_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="luna2_radial"
+              gradientTransform="matrix(0 19.1188 -31.0982 0 335.098 161.119)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#EAB701" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="luna3_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="luna3_radial"
+              gradientTransform="matrix(0 19.1188 -31.0982 0 335.098 161.119)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#EAB701" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="luna4_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="luna4_radial"
+              gradientTransform="matrix(0 15.25 -29.1363 0 185.136 156.25)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#EAB701" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+            <radialGradient
+              id="luna5_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              class="luna5_radial"
+              gradientTransform="matrix(0 12.4158 -30.8881 0 334.888 163.389)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#EAB701" />
+              <stop offset="1" stop-color="#FAFF1C" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <script src="anime.min.js"></script>
+
+    <script>
+      function appHeight() {
+        const doc = document.documentElement;
+        doc.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+      }
+
+      window.addEventListener('resize', appHeight);
+      appHeight();
+
+      const mausi = document.querySelector('.cat-mausi');
+      const mausiEyesClosed = mausi.querySelectorAll('.eye-closed');
+      const mausiEyesHalfOpen = mausi.querySelectorAll('.eye-half-open');
+      const mausiEyesOpen = mausi.querySelectorAll('.eye-open');
+      const mausiEyesWideOpen = mausi.querySelectorAll('.eye-wide-open');
+
+      const luna = document.querySelector('.cat-luna');
+      const lunaEyesClosed = luna.querySelectorAll('.eye-closed');
+      const lunaEyesHalfOpen = luna.querySelectorAll('.eye-half-open');
+      const lunaEyesOpen = luna.querySelectorAll('.eye-open');
+      const lunaEyesWideOpen = luna.querySelectorAll('.eye-wide-open');
+
+      const mausitl = anime.timeline({
+        duration: 1000,
+        easing: 'easeOutExpo',
+        loop: true,
+      });
+
+      mausitl
+        .add(
+          {
+            targets: mausiEyesClosed,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=4000'
+        )
+        .add({
+          targets: mausiEyesHalfOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: mausiEyesHalfOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=2000'
+        )
+        .add({
+          targets: mausiEyesClosed,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: mausiEyesClosed,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=2000'
+        )
+        .add({
+          targets: mausiEyesHalfOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: mausiEyesHalfOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=1000'
+        )
+        .add({
+          targets: mausiEyesWideOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: mausiEyesWideOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=2000'
+        )
+        .add({
+          targets: mausiEyesOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: mausiEyesOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=1000'
+        )
+        .add({
+          targets: mausiEyesWideOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: mausiEyesWideOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=4000'
+        )
+
+        // close again
+        .add({
+          targets: mausiEyesHalfOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: mausiEyesHalfOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=2000'
+        )
+        .add({
+          targets: mausiEyesClosed,
+          opacity: 1,
+          duration: 1,
+        });
+
+      const lunatl = anime.timeline({
+        duration: 1000,
+        easing: 'easeOutExpo',
+        loop: true,
+      });
+
+      lunatl
+        .add({
+          targets: lunaEyesClosed,
+          opacity: 0,
+          duration: 1,
+        })
+        .add({
+          targets: lunaEyesWideOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: lunaEyesWideOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=3000'
+        )
+        .add({
+          targets: lunaEyesHalfOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: lunaEyesHalfOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=2000'
+        )
+        .add({
+          targets: lunaEyesWideOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: lunaEyesWideOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=3000'
+        )
+        .add({
+          targets: lunaEyesOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: lunaEyesOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=5000'
+        )
+        .add({
+          targets: lunaEyesHalfOpen,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: lunaEyesHalfOpen,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=1500'
+        )
+        .add({
+          targets: lunaEyesClosed,
+          opacity: 1,
+          duration: 1,
+        })
+        .add(
+          {
+            targets: lunaEyesClosed,
+            opacity: 0,
+            duration: 1,
+          },
+          '+=5000'
+        );
+    </script>
+  </body>
+</html>
