@@ -216,7 +216,11 @@
       );
       aTL.to(replayButton, { opacity: 1, y: 0 });
 
-      replayButton.onclick = aTL.restart();
+      function restartTimeline() {
+        aTL.restart();
+      }
+
+      replayButton.onclick = restartTimeline;
     </script>
   </body>
 </html>
