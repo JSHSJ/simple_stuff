@@ -64,6 +64,7 @@
         top: 16px;
         right: 16px;
         z-index: 100;
+        outline: none;
       }
 
       svg {
@@ -78,7 +79,6 @@
 
         display: flex;
         flex-direction: column;
-
       }
 
       .navItem {
@@ -105,8 +105,6 @@
         justify-content: center;
         align-items: center;
       }
-
-
     </style>
   </head>
   <body>
@@ -126,17 +124,16 @@
       >Alles</a
     >
 
-
-      <button label="Menü" class="toggle" onclick="toggleMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
-          <g class="menu-toggle">
-            <g class="Group 18">
-              <path fill="currentColor" d="M21 62h48v8H21z" class="bar lower"/>
-              <path fill="currentColor" d="M32 46h48v8H32z" class="bar middle"/>
-              <path fill="currentColor" d="M21 30h48v8H21z" class="bar top"/>
-            </g>
+    <button label="Menü" class="toggle" onclick="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+        <g class="menu-toggle">
+          <g class="Group 18">
+            <path fill="currentColor" d="M21 62h48v8H21z" class="bar lower" />
+            <path fill="currentColor" d="M32 46h48v8H32z" class="bar middle" />
+            <path fill="currentColor" d="M21 30h48v8H21z" class="bar top" />
           </g>
-        </svg>        
+        </g>
+      </svg>
     </button>
     <div class="menu">
       <ul>
@@ -158,47 +155,45 @@
       window.addEventListener('resize', appHeight);
       appHeight();
 
-      const bars = document.querySelectorAll(".bar")
-      const barTop = document.querySelector(".top")
-      const barMiddle = document.querySelector(".middle")
-      const barLower = document.querySelector(".lower")
-      const menu = document.querySelector('.menu')
-      const navItems = document.querySelectorAll(".navItem")
+      const bars = document.querySelectorAll('.bar');
+      const barTop = document.querySelector('.top');
+      const barMiddle = document.querySelector('.middle');
+      const barLower = document.querySelector('.lower');
+      const menu = document.querySelector('.menu');
+      const navItems = document.querySelectorAll('.navItem');
 
       let menuOpen = false;
 
-      const tl = gsap.timeline({paused: true});
+      const tl = gsap.timeline({ paused: true });
       gsap.set('.bar', { visibility: 'visible', transformOrigin: '50% 50%' });
       gsap.set(menu, { visibility: 'visible', transformOrigin: '100% 0%', x: '100%', y: 16 });
       gsap.set(navItems, { visibility: 'visible', x: 12, opacity: 0 });
 
       tl.addLabel('start');
-      tl.to(barMiddle, { x: 20, opacity: 0, ease: "power2.in", duration: 0.3 }, 'start')
-      tl.to(barTop, { y: 16, x:5, ease: 'power2.in', duration: 0.15}, 'start')
-      tl.to(barTop, {rotation: 45, ease: 'power2.inOut', duration: 0.15}, 'start+0.1')
-      tl.to(barLower, { y: -16, x: 5, ease: 'power2.in', duration: 0.15}, 'start')
-      tl.to(barLower, {rotation: -45, ease: 'power2.inOut', duration: 0.15}, 'start+0.1')
-      tl.to('.toggle', { color: '#131313', backgroundColor: 'pink', duration: 0.3}, 'start')
+      tl.to(barMiddle, { x: 20, opacity: 0, ease: 'power2.in', duration: 0.3 }, 'start');
+      tl.to(barTop, { y: 16, x: 5, ease: 'power2.in', duration: 0.15 }, 'start');
+      tl.to(barTop, { rotation: 45, ease: 'power2.inOut', duration: 0.15 }, 'start+0.1');
+      tl.to(barLower, { y: -16, x: 5, ease: 'power2.in', duration: 0.15 }, 'start');
+      tl.to(barLower, { rotation: -45, ease: 'power2.inOut', duration: 0.15 }, 'start+0.1');
+      tl.to('.toggle', { color: '#131313', backgroundColor: 'pink', duration: 0.3 }, 'start');
 
-      const menuTL = gsap.timeline({paused: true})
-      menuTL.addLabel('start')
-      menuTL.to(menu, {x: 0, ease: 'power2.out', duration: 0.15})
-      menuTL.to(menu, {y: 0, ease: 'power2.out', duration: 0.15})
-      menuTL.addLabel('items')
-      menuTL.to(navItems, { x: 0, opacity: 1, stagger: 0.15})
-
-      
+      const menuTL = gsap.timeline({ paused: true });
+      menuTL.addLabel('start');
+      menuTL.to(menu, { x: 0, ease: 'power2.out', duration: 0.15 });
+      menuTL.to(menu, { y: 0, ease: 'power2.out', duration: 0.15 });
+      menuTL.addLabel('items');
+      menuTL.to(navItems, { x: 0, opacity: 1, stagger: 0.15 });
 
       function toggleMenu() {
         if (menuOpen) {
-          tl.reverse()
-          menuTL.reverse('items')
+          tl.reverse();
+          menuTL.reverse('items');
         } else {
-          tl.play()
-          menuTL.play()
+          tl.play();
+          menuTL.play();
         }
 
-        menuOpen = !menuOpen
+        menuOpen = !menuOpen;
       }
     </script>
   </body>
