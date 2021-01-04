@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nummer 6: Ein Menü</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #fdf9f6;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+        min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        min-height: calc(var(--vh, 1vh) * 100);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 90vw;
+        height: 90vw;
+        max-width: 640px;
+        max-height: 640px;
+        padding: 2%;
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+
+      .bar {
+        visibility: hidden;
+        color: inherit;
+      }
+
+      button {
+        display: block;
+        border: none;
+        background: #131313;
+        color: pink;
+        width: 48px;
+        height: 48px;
+        padding: 8px;
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 100;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .navItem {
+        color: pink;
+        margin-bottom: 8px;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: sans-serif;
+        visibility: hidden;
+      }
+
+      .menu {
+        width: 100%;
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+        position: fixed;
+        background-color: #131313;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <a
+      href="/"
+      style="
+        font-size: 1em;
+        color: pink;
+        font-family: sans-serif;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 12px;
+        display: block;
+        background-color: #000;
+      "
+      >Alles</a
+    >
+
+
+      <button label="Menü" class="toggle" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+          <g class="menu-toggle">
+            <g class="Group 18">
+              <path fill="currentColor" d="M21 62h48v8H21z" class="bar lower"/>
+              <path fill="currentColor" d="M32 46h48v8H32z" class="bar middle"/>
+              <path fill="currentColor" d="M21 30h48v8H21z" class="bar top"/>
+            </g>
+          </g>
+        </svg>        
+    </button>
+    <div class="menu">
+      <ul>
+        <li class="navItem">Das</li>
+        <li class="navItem">ist</li>
+        <li class="navItem">das</li>
+        <li class="navItem">Menü</li>
+      </ul>
+    </div>
+    <script src="../../libs/gsap.min.js"></script>
+    <script src="../../libs/DrawSVGPlugin.min.js"></script>
+    <script src="../../libs/EasePack.min.js"></script>
+    <script src="../../libs/MotionPathPlugin.min.js"></script>
+    <script>
+      function appHeight() {
+        const doc = document.documentElement;
+        doc.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+      }
+      window.addEventListener('resize', appHeight);
+      appHeight();
+
+      const bars = document.querySelectorAll(".bar")
+      const barTop = document.querySelector(".top")
+      const barMiddle = document.querySelector(".middle")
+      const barLower = document.querySelector(".lower")
+      const menu = document.querySelector('.menu')
+      const navItems = document.querySelectorAll(".navItem")
+
+      let menuOpen = false;
+
+      const tl = gsap.timeline({paused: true});
+      gsap.set('.bar', { visibility: 'visible', transformOrigin: '50% 50%' });
+      gsap.set(menu, { visibility: 'visible', transformOrigin: '100% 0%', x: '100%', y: 16 });
+      gsap.set(navItems, { visibility: 'visible', x: 12, opacity: 0 });
+
+      tl.addLabel('start');
+      tl.to(barMiddle, { x: 20, opacity: 0, ease: "power2.in", duration: 0.3 }, 'start')
+      tl.to(barTop, { y: 16, x:5, ease: 'power2.in', duration: 0.15}, 'start')
+      tl.to(barTop, {rotation: 45, ease: 'power2.inOut', duration: 0.15}, 'start+0.1')
+      tl.to(barLower, { y: -16, x: 5, ease: 'power2.in', duration: 0.15}, 'start')
+      tl.to(barLower, {rotation: -45, ease: 'power2.inOut', duration: 0.15}, 'start+0.1')
+      tl.to('.toggle', { color: '#131313', backgroundColor: 'pink', duration: 0.3}, 'start')
+
+      const menuTL = gsap.timeline({paused: true})
+      menuTL.addLabel('start')
+      menuTL.to(menu, {x: 0, ease: 'power2.out', duration: 0.15})
+      menuTL.to(menu, {y: 0, ease: 'power2.out', duration: 0.15})
+      menuTL.addLabel('items')
+      menuTL.to(navItems, { x: 0, opacity: 1, stagger: 0.15})
+
+      
+
+      function toggleMenu() {
+        if (menuOpen) {
+          tl.reverse()
+          menuTL.reverse('items')
+        } else {
+          tl.play()
+          menuTL.play()
+        }
+
+        menuOpen = !menuOpen
+      }
+    </script>
+  </body>
+</html>
