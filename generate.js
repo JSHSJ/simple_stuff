@@ -12,7 +12,7 @@ const links = pages
     //   target: `pages/${page}`,
     //   name: title,
     // };
-    return `<a href="pages/${page}">${title}</a>`;
+    return `<li><a href="pages/${page}">${title}</a></li>`;
   });
 
 const index = fs.readFileSync('index.template', { encoding: 'utf8' }).replace('__LINKS__', links.join('\n'));

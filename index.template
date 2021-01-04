@@ -7,12 +7,36 @@
     <style>
       a {
         display: block;
+        color: pink;
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+      body {
+        background: #131313;
+        color: #f6c2cb;
+        padding: 5%;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-size: clamp(2.125em,2.125em + 1vw,4em);
+
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 40px;
       }
     </style>
   </head>
   <body>
-    <h1>HALLO</h1>
-    <p>Was geht?</p>
+    <h1>Hey, Magst du was sehen?</h1>
+    <ul>
     __LINKS__
+    </ul>
+    
   </body>
 </html>

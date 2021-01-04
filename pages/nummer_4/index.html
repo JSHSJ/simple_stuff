@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nummer 4: Herzensangelegenheiten</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #fdf9f6;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+        min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        min-height: calc(var(--vh, 1vh) * 100);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 90vw;
+        height: 90vw;
+        max-width: 640px;
+        max-height: 640px;
+        padding: 2%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+
+      .baloon,
+      .string,
+      .ball,
+      .wind {
+        visibility: hidden;
+      }
+
+      #replay {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+        color: white;
+        background-color: rgb(255, 100, 100);
+        border: none;
+        padding: 12px 24px;
+        border-radius: 2px;
+        font-size: 20px;
+        font-style: italic;
+        font-family: serif;
+        display: block;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a
+      href="/"
+      style="
+        font-size: 1em;
+        color: pink;
+        font-family: sans-serif;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 12px;
+        display: block;
+        background-color: #000;
+      "
+      >Alles</a
+    >
+
+    <div class="container">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 400 400">
+        <g class="Frame 3">
+          <path fill="#fff" d="M0 0h400v400H0z" />
+          <path stroke="#000" d="M0 325.5h400" class="Line 2" />
+          <g class="baloon">
+            <path
+              stroke="#000"
+              d="M220 220.677
+              c0 15.09 -25.78
+              35.323 -25.78 
+              35.323-5.65
+              -5.83-20.129
+              -17.147-18.01
+              -35.323 2.119
+              -18.176 20.129
+              6.516 20.129
+              6.516S220 205.588
+              220 220.677z"
+              class="heart"
+            />
+            <path
+              stroke="#000"
+              d="M185.2 304c-3.703-3.81-7.258-14.019 8.147-24.381 19.257-12.952-4.443-14.476 0-23.619"
+              class="string"
+            />
+          </g>
+          <circle cx="200" cy="310" r="15.5" fill="#fff" stroke="#000" class="ball" />
+          <path
+            stroke="#000"
+            d="
+          M183.5 51.399
+          c30,-4.424-22
+          22.576,80.5 6"
+            class="wind"
+          />
+          <path
+            stroke="#000"
+            d="M303 129.283c13.5-3.004 1.532 19.063 28.5 10.889 10-3.031 4-8.142 34.5-3.031"
+            class="wind 2"
+          />
+          <path
+            stroke="#000"
+            d="M71 240.979c10.097.723 8.38-17.147 19.69-10.491 14.135 8.32 6.058 16.854 32.31 3.108"
+            class="wind 3"
+          />
+        </g>
+      </svg>
+    </div>
+    <button id="replay">Replay</button>
+    <script src="../../libs/gsap.min.js"></script>
+    <script src="../../libs/DrawSVGPlugin.min.js"></script>
+    <script src="../../libs/EasePack.min.js"></script>
+    <script src="../../libs/MotionPathPlugin.min.js"></script>
+
+    <script>
+      function appHeight() {
+        const doc = document.documentElement;
+        doc.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+      }
+      window.addEventListener('resize', appHeight);
+      appHeight();
+
+      gsap.registerPlugin(MotionPathPlugin);
+      gsap.registerPlugin(DrawSVGPlugin);
+
+      const tl = gsap.timeline({});
+      const replayButton = document.getElementById('replay');
+
+      const windTL = gsap.timeline({ repeat: -1 });
+      windTL.set('.wind', { visibility: 'visible', drawSVG: 0 });
+      windTL.to('.wind', { duration: 0.3, drawSVG: '0 100%', stagger: 0.4, ease: 'circ.out' });
+      windTL.to('.wind', { duration: 0.3, drawSVG: '100% 100%', stagger: 0.4, ease: 'circ.out' }, '-=0.6');
+
+      const aTL = gsap.timeline({});
+      aTL.set('.ball', { visibility: 'visible', x: -250, rotation: 204, transformOrigin: '50% 50%' });
+      aTL.set('.string', { visibility: 'visible', drawSVG: 0 });
+      aTL.set(replayButton, { visibility: 'visible', opacity: 0, y: 10 });
+      aTL.set('.heart', { visibility: 'visible', drawSVG: 0, fill: 'white' });
+      aTL.to('.ball', { x: 0, duration: 3, ease: 'back.out(1.7)' });
+      aTL.addLabel('ballCentered', '-=0.2');
+      aTL.to('.string', { drawSVG: '0 100%', duration: 0.6 }, 'ballCentered');
+      aTL.to('.ball', { drawSVG: '100% 100%', duration: 0.6 }, 'ballCentered');
+      aTL.to('.heart', { drawSVG: '0% 100%', duration: 0.3 }, '-=0.3');
+      aTL.to('.heart', { fill: 'rgb(255, 100, 100)', duration: 0.3 });
+      aTL.to(
+        '.baloon',
+        {
+          motionPath: {
+            curviness: 1,
+            path: [
+              {
+                x: 10,
+                y: -50,
+              },
+              {
+                x: 30,
+                y: -125,
+              },
+              {
+                x: 50,
+                y: -200,
+              },
+              {
+                x: 70,
+                y: -275,
+              },
+              {
+                x: 85,
+                y: -350,
+              },
+              {
+                x: 100,
+                y: -400,
+              },
+            ],
+          },
+          ease: Circ.in,
+          duration: 4,
+        },
+        '-=0.2'
+      );
+      aTL.to(replayButton, { opacity: 1, y: 0 });
+
+      replayButton.onclick = aTL.restart();
+    </script>
+  </body>
+</html>
