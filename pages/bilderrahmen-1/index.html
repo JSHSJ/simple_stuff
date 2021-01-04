@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilderrahmen eins</title>
+
+    <style>
+        * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #080808;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      #canvas {
+          width: 100%;
+          height: 100%;
+      }
+    </style>
+</head>
+<body>
+    <canvas id="canvas">
+
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext("2d");
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+
+        requestAnimationFrame(() => loop(0,0))
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min) ) + min;
+        }
+
+        function loop(currentWidth, currentHeight) {
+
+            currentWidth += getRndInteger(-2, 10)
+            currentHeight += getRndInteger(-1, 3)
+            const color = `rgb(${getRndInteger(0, 255)},${getRndInteger(0, 255)},${getRndInteger(0, 255)})`
+            ctx.strokeStyle = color
+            ctx.lineWidth = getRndInteger(0.1, 20)
+
+            if (currentWidth > width) {
+                currentWidth = 0
+                ctx.moveTo(currentWidth, currentHeight)
+            }
+            if (currentHeight > height) {
+                currentHeight = 0
+                ctx.moveTo(currentWidth, currentHeight)
+            }
+
+            ctx.lineTo(currentWidth, currentHeight)
+            ctx.stroke()
+
+            requestAnimationFrame(() => loop(currentWidth, currentHeight))
+        }
+        
+    </script>
+    
+</body>
+</html>
