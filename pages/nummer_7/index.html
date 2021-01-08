@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nummer 7: Joshua</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #fdf9f6;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+        min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        min-height: calc(var(--vh, 1vh) * 100);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #fdf9f6;
+        width: 90vw;
+        height: 90vw;
+        max-width: 640px;
+        max-height: 640px;
+        /* padding: 2%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .shape,
+      .letter,
+      .rounded {
+        visibility: hidden;
+        transform-origin: 50% 50%;
+        stroke: #131313;
+      }
+    </style>
+  </head>
+  <body>
+    <a
+      href="/"
+      style="
+        font-size: 1em;
+        color: pink;
+        font-family: sans-serif;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 12px;
+        display: block;
+        background-color: #000;
+      "
+      >Alles</a
+    >
+
+    <div class="container">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 400 400">
+        <g class="Frame 6">
+          <g class="shapes">
+            <path fill="#131313" d="M59 200.055L119.75 139v122.11L59 200.055z" class="shape shape-j" />
+            <path
+              fill="#131313"
+              d="M168 202.555c0 11.046-8.954 20-20 20s-20-8.954-20-20 8.954-20 20-20 20 8.954 20 20z"
+              class="shape shape-o"
+            />
+            <path
+              fill="#131313"
+              d="M191 182.555l12.99 18h-25.98l12.99-18zM191 222.555l-12.99-18h25.98l-12.99 18z"
+              class="shape shape-s"
+            />
+            <path fill="#131313" d="M272 222.555l-22.517-39h45.034l-22.517 39z" class="shape shape-u" />
+            <path fill="#131313" d="M319 182.555l22.517 39h-45.034l22.517-39z" class="shape shape-a" />
+            <path fill="#131313" d="M214 222.555v-83l35 83h-35z" class="shape shape-h" />
+          </g>
+          <g class="letters">
+            <path stroke="#000" d="M85.5 173.5l34-33.5v120l-34-33" class="letter letter-j" />
+            <path
+              stroke="#000"
+              d="M167.5 203c0 10.77-8.73 19.5-19.5 19.5s-19.5-8.73-19.5-19.5c0-10.786 8.746-20 19.5-20s19.5 9.214 19.5 20z"
+              class="letter letter-o"
+            />
+            <path stroke="#000" d="M203.5 200.5L191 183l-12.5 17.5 25 4.5-12.5 17-13-17.5" class="letter letter-s" />
+            <path stroke="#000" d="M214 140l.5 41.75m0 40.75v-40.75m0 0L249 222.5" class="letter letter-h" />
+            <path
+              stroke="#000"
+              d="M249.5 183.5l22.5 38 10.5-17.5m12-20.5l-12 20.5m0 0l12 17.5"
+              class="letter letter-u"
+            />
+            <path stroke="#000" d="M319 183.5l-22 38 44-.5-22-37.5z" class="letter letter-a" />
+          </g>
+          <g class="rounded">
+            <path
+              stroke="#000"
+              d="M82 152.5l36-11.5c4.167 37 9.3 111.6-3.5 114-12.8 2.4-32.333-11.667-40.5-19"
+              class="rounded rounded-j"
+            />
+            <path
+              stroke="#000"
+              d="M167.5 203c0 10.77-8.73 19.5-19.5 19.5s-19.5-8.73-19.5-19.5c0-10.786 8.746-20 19.5-20s19.5 9.214 19.5 20z"
+              class="rounded rounded-o"
+            />
+            <path
+              stroke="#000"
+              d="M203 191.5c-5.167-6.833-17.2-17.1-24-3.5-6.8 13.6 8.5 13.152 17.5 15.5 11.5 3 9 19.5 2 19.5-15.849 0-19.5-5.833-19.5-7"
+              class="rounded rounded-s"
+            />
+            <path
+              stroke="#000"
+              d="M250 184c3.167 16.5 11.4 47.3 19 38.5 7.6-8.8 17.833-30 22-39.5-8 12.333-14.1 39-4.5 41"
+              class="rounded rounded-u"
+            />
+            <path
+              stroke="#000"
+              d="M213.959 140v55.628m0 0V223c-.539-9.388-1.858-20.337 0-27.372zm0 0c1.012-3.831 2.966-6.501 6.5-7.128 31-5.5 20.334 26 26 34.5"
+              class="rounded rounded-h"
+            />
+            <path
+              stroke="#000"
+              d="M329 184c-2.8-11.2 5.366 34.76 3.5 37-2.5 3-8 4.5-23.5 0-8.205-2.382-12-27 0-32 12.409-5.171 13.216-1.017 20-5zm0 0c-1.5 13 6.5 40 16.5 40"
+              class="rounded rounded-a"
+            />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <script src="../../libs/gsap.min.js"></script>
+    <script src="../../libs/DrawSVGPlugin.min.js"></script>
+    <script src="../../libs/EasePack.min.js"></script>
+    <script src="../../libs/MotionPathPlugin.min.js"></script>
+    <script src="../../libs/MorphSVGPlugin.min.js"></script>
+
+    <script>
+      function appHeight() {
+        const doc = document.documentElement;
+        doc.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+      }
+
+      const letters = ['j', 'o', 's', 'h', 'u', 'a'];
+      const shapes = document.querySelectorAll('.shape');
+      const letter = document.querySelectorAll('.letter');
+      const rounded = document.querySelectorAll('.rounded');
+      window.addEventListener('resize', appHeight);
+      appHeight();
+
+      // gsap.registerPlugin(MotionPathPlugin);
+      // gsap.registerPlugin(DrawSVGPlugin);
+      gsap.registerPlugin(MorphSVGPlugin);
+
+      const tl = gsap.timeline({
+        repeat: -1,
+        repeatDelay: 2,
+      });
+      tl.set(rounded, { visibility: 'visible' });
+      letters.forEach((l) => {
+        tl.to(`.rounded-${l}`, { duration: 1, morphSVG: `.letter-${l}` }, 0);
+      });
+      tl.addLabel('shapeStart');
+      letters.forEach((l) => {
+        tl.to(`.rounded-${l}`, { duration: 1, morphSVG: `.shape-${l}` }, 2);
+        tl.to(`.rounded-${l}`, { duration: 1, fill: '#131313' }, 2.8);
+      });
+      letters.forEach((l) => {
+        tl.to(`.rounded-${l}`, { duration: 1, morphSVG: `.rounded-${l}`, fill: 'transparent' }, 4.8);
+      });
+    </script>
+  </body>
+</html>
