@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nummer 8: Un homage á El Lissitzky</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #fdf9f6;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+        min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        min-height: calc(var(--vh, 1vh) * 100);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #fdf9f6;
+        width: 90vw;
+        height: 90vw;
+        max-width: 640px;
+        max-height: 640px;
+        border: 2px solid black;
+        /* padding: 2%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .city,
+      .square,
+      .ball,
+      .party,
+      .ball-city {
+        visibility: hidden;
+        transform-origin: 50% 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <a
+      href="/"
+      style="
+        font-size: 1em;
+        color: pink;
+        font-family: sans-serif;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 12px;
+        display: block;
+        background-color: #000;
+      "
+      >Alles</a
+    >
+
+    <div class="container">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 400 400">
+        <g class="Frame 7">
+          <g class="ball-city">
+            <g class="city">
+              <g class="Vector 64">
+                <path
+                  fill="#F8A0FA"
+                  d="M110.497 140l10.541 25.4-3.817 6.456-54.955 22.807-9.966-24.014 3.242-7.842L110.497 140z"
+                />
+                <path
+                  stroke="#000"
+                  d="M66.083 188.207l54.955-22.807m-54.955 22.807l-10.541-25.4m10.54 25.4l-3.816 6.456m58.772-29.263L110.497 140l-54.955 22.807m65.496 2.593l-3.817 6.456-54.955 22.807m-6.724-31.856l-3.242 7.842 9.966 24.014"
+                />
+              </g>
+              <g class="Vector 59">
+                <path
+                  fill="#161515"
+                  d="M68.113 194.153l-22.75 19.557-5.866-6.825 6.445-5.541-5.867-6.825.645-3.851 8.342-7.171 5.867 6.825 8.72-7.497 5.216 6.066-.752 5.262z"
+                />
+                <path
+                  stroke="#000"
+                  d="M68.113 194.153l-22.75 19.557-5.866-6.825 6.445-5.541-5.867-6.825m28.038-.366l-5.867-6.825m5.867 6.825l.752-5.262-5.215-6.066m-1.404 4.503l-8.72 7.497L47.657 188m14.588-.672l1.404-4.503M47.657 188l-7.583 6.519M47.658 188l1.404-4.503m-8.987 11.022l.645-3.851 8.342-7.171m14.588-.672l-8.721 7.497-5.867-6.825"
+                />
+              </g>
+              <g class="Vector 60">
+                <path fill="#fff" d="M89 151.937V191h-7.42L79 188.74V150h7.42l2.58 1.937z" />
+                <path
+                  stroke="#000"
+                  d="M81.58 191v-39.063m0 39.063H89v-39.063M81.58 191L79 188.74V150m2.58 1.937H89m-7.42 0L79 150m10 1.937L86.42 150H79"
+                />
+              </g>
+              <g class="Vector 61">
+                <path fill="#872828" d="M78.5 138v60.5H67l-4-3.5v-60h11.5l4 3z" />
+                <path
+                  stroke="#000"
+                  d="M67 198.5V138m0 60.5h11.5V138M67 198.5l-4-3.5v-60m4 3h11.5M67 138l-4-3m15.5 3l-4-3H63"
+                />
+              </g>
+              <g class="Vector 63">
+                <path fill="#EC8787" d="M92 184.5l1.5-65L106 109h23l-1.5 67.5-11 8H92z" />
+                <path
+                  stroke="#000"
+                  d="M93.5 119.5l-1.5 65h24.5m-23-65h23m-23 0L106 109h23m-12.5 75.5v-65m0 65l11-8L129 109m-12.5 10.5L129 109"
+                />
+              </g>
+              <g class="Vector 65">
+                <path
+                  fill="#fff"
+                  d="M122.662 166.778l8.656-2.766 2.445 1.366 2.726 8.529-8.655 2.766-2.601-1.854-2.571-8.041z"
+                />
+                <path
+                  stroke="#000"
+                  d="M131.318 164.012l-8.656 2.766 2.571 8.041m6.085-10.807l2.57 8.041m-2.57-8.041l2.445 1.366 2.726 8.529m-2.601-1.854l-8.655 2.766m8.655-2.766l2.601 1.854m-11.256.912l2.601 1.854 8.655-2.766"
+                />
+              </g>
+              <g class="Vector 66">
+                <path
+                  fill="#fff"
+                  d="M107 180.183l72.868-23.291 12.551 8.062 2.435 7.62-70.487 22.53-15.236-8.254-2.131-6.667z"
+                />
+                <path
+                  stroke="#000"
+                  d="M179.868 156.892L107 180.183l2.131 6.667m70.737-29.958L182 163.56m-2.132-6.668l12.551 8.062 2.435 7.62M182 163.56l-72.869 23.29M182 163.56l12.854 9.014m-85.723 14.276l15.236 8.254 70.487-22.53"
+                />
+              </g>
+              <g class="Vector 62">
+                <path
+                  fill="#EFD0D0"
+                  d="M162.129 172.011l18.098-5.785 5.028 2.593 5.328 16.669-18.098 5.784-5.332-3.544-5.024-15.717z"
+                />
+                <path
+                  stroke="#000"
+                  d="M180.227 166.226l-18.098 5.785 5.024 15.717m13.074-21.502l5.024 15.717m-5.024-15.717l5.028 2.593 5.328 16.669m-5.332-3.545l-18.098 5.785m18.098-5.785l5.332 3.545m-23.43 2.24l5.332 3.544 18.098-5.784"
+                />
+              </g>
+              <g class="party">
+                <g class="face face-2">
+                  <path stroke="#000" d="M69 146c1-.5 3 0 3 0" class="Vector 67" />
+                  <path stroke="#000" d="M77 146c-1.5-.5-3 0-3 0" class="Vector 70" />
+                  <path stroke="#000" d="M71 148c.4.755 1.56 1.811 3 0" class="Vector 69" />
+                </g>
+                <g class="face face-1">
+                  <path stroke="#000" d="M97.5 132c3.6-.4 4.833.167 5 .5" class="Vector 67_2" />
+                  <path stroke="#000" d="M111 132.138c-3.6-.4-4.833.166-5 .5" class="Vector 70_2" />
+                  <path stroke="#000" d="M102 136c.667 1 2.6 2.4 5 0" class="Vector 69_2" />
+                </g>
+                <path stroke="#000" d="M64.5 149.5c-3.667-.833-10.8-3-10-5 1-2.5 6-8-2-9" class="arm arm-l" />
+                <path stroke="#000" d="M79 150c2.5-.833 6.9-3 4.5-5-3-2.5 5.5-5.5 2-6.5" class="arm arm-r" />
+                <g class="face-3">
+                  <path stroke="#000" d="M174.5 174.5c-.5-.667-.5-1.9 3.5-1.5" class="Vector 71" />
+                  <path stroke="#000" d="M167.5 176c.667-1 2.4-2.6 4-1" class="Vector 72" />
+                  <path stroke="#000" d="M175.5 177c0 2-.8 5-4 1" class="Vector 73" />
+                </g>
+                <path stroke="#000" d="M185 174.5c2.5.667 7 2 9.5-3" class="arm arm-l-2" />
+                <path stroke="#000" d="M164.5 181c-2-.833-6.3-1.6-7.5 2" class="arm arm-r-2" />
+              </g>
+            </g>
+            <circle cx="110" cy="272" r="90" fill="#c21414" class="ball" />
+          </g>
+          <path fill="#c21414" d="M238 53.255L283.255 8l45.255 45.255-45.255 45.255z" class="square square-red" />
+          <path fill="#000" d="M303 91.255L348.255 46l45.255 45.255-45.255 45.255z" class="square square-black" />
+        </g>
+      </svg>
+    </div>
+    <script src="../../libs/gsap.min.js"></script>
+    <script src="../../libs/DrawSVGPlugin.min.js"></script>
+    <script src="../../libs/EasePack.min.js"></script>
+    <script src="../../libs/MotionPathPlugin.min.js"></script>
+    <script src="../../libs/MorphSVGPlugin.min.js"></script>
+
+    <script>
+      function appHeight() {
+        const doc = document.documentElement;
+        doc.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+      }
+
+      const squares = document.querySelectorAll('.square');
+      const squareBlack = document.querySelector('.square-black');
+      const squareRed = document.querySelector('.square-red');
+      const city = document.querySelector('.city');
+      const ball = document.querySelector('.ball');
+      const ballCity = document.querySelector('.ball-city');
+      const svgRoot = document.querySelector('svg');
+      const party = document.querySelector('.party');
+      window.addEventListener('resize', appHeight);
+      appHeight();
+
+      gsap.registerPlugin(MorphSVGPlugin);
+
+      const tl = gsap.timeline({
+        repeat: 0,
+      });
+      tl.set(squares, { visibility: 'visible' });
+      tl.set(city, { visibility: 'visible' });
+      tl.set(ball, { visibility: 'visible' });
+      tl.set(party, { visibility: 'visible', opacity: 0 });
+      tl.set(ballCity, { transformOrigin: '50% 163px' });
+
+      // CITY
+      const cityTL = gsap.timeline({
+        repeat: 0,
+        paused: true,
+        onComplete: startParty,
+        onReverseComplete: stopParty,
+      });
+      cityTL.addLabel('start');
+      cityTL.to(svgRoot, 0.2, { attr: { viewBox: '40 80 160 150' } }, 'start');
+      cityTL.to(party, 0.1, { opacity: 1 }, 'start');
+
+      // PARTY
+      const innerCityTL = gsap.timeline({
+        repeat: -1,
+        paused: true,
+      });
+      const partyTL = gsap.timeline({
+        repeat: -1,
+        yoyo: true,
+        paused: true,
+      });
+      innerCityTL.to(city, 0.1, {
+        x: 0,
+        y: 5,
+        ease: "rough({ template:none.out,strength:1,points:20,taper:'none',randomize: true,clamp: false})",
+      });
+      innerCityTL.to(city, 0.1, {
+        x: -5,
+        y: -5,
+        ease: "rough({ template:none.out,strength:1,points:20,taper:'none',randomize: true,clamp: false})",
+      });
+      innerCityTL.to(city, 0.1, {
+        x: 0,
+        y: 0,
+        ease: "rough({ template:none.out,strength:1,points:20,taper:'none',randomize: true,clamp: false})",
+      });
+
+      const armLTarget = `M64 150c-3.667-.833-5.5-4.5-6.5-6-1.687-2.531-9-3-7.5-6.5`;
+      const armRTarget = `M79 149.5c2.5-.833 1.418-4.486 4.5-5 6-1-3.5-7 2-6.5`;
+      const armL2Target = 'M185 174c2-1.5 2-5 9.5-3';
+      const armR2Target = 'M164.5 180.696c-1 3.304-3 3.304-7.5 2';
+      partyTL.addLabel('start');
+      partyTL.to('.arm-l', 0.1, { attr: { d: armLTarget } }, 'start');
+      partyTL.to('.arm-r', 0.1, { attr: { d: armRTarget } }, 'start');
+      partyTL.to('.arm-l-2', 0.1, { attr: { d: armL2Target } }, 'start');
+      partyTL.to('.arm-r-2', 0.1, { attr: { d: armR2Target } }, 'start');
+
+      function startParty() {
+        innerCityTL.play();
+        partyTL.play();
+      }
+
+      function stopParty() {
+        innerCityTL.pause(0);
+        partyTL.pause(0);
+      }
+
+      function zoomCity() {
+        cityTL.play();
+        city.onclick = zoomOutCity;
+      }
+
+      function zoomOutCity() {
+        cityTL.reverse();
+        city.onclick = zoomCity;
+      }
+
+      city.onclick = zoomCity;
+
+      // Squares
+      const squaresTL = gsap.timeline({
+        repeat: -1,
+        paused: true,
+      });
+      squaresTL.addLabel('start');
+      squaresTL
+        .to(squareBlack, 0.3, { x: -64, y: 64 })
+        .to(squareBlack, 0.3, { x: -116, y: 12 })
+        .to(squareBlack, 0.3, { x: -65, y: -38 });
+      squaresTL.to(squareRed, 0.3, { x: 13, y: -13 }, 'start').to(squareRed, 0.3, { x: 65, y: 38 }, 'start+=0.3');
+      squaresTL.addLabel('midPoint');
+      squaresTL.addPause('midPoint');
+      squaresTL
+        .to(squareRed, 0.3, { x: 1, y: 102 })
+        .to(squareRed, 0.3, { x: -51, y: 50 })
+        .to(squareRed, 0.3, { x: 0, y: 0 });
+      squaresTL
+        .to(squareBlack, 0.3, { x: -52, y: -51 }, 'midPoint')
+        .to(squareBlack, 0.3, { x: 0, y: 0 }, 'midPoint+=0.3');
+      squaresTL.addPause();
+      squareBlack.onclick = () => squaresTL.play();
+      squareRed.onclick = () => squaresTL.play();
+
+      // ball
+
+      const ballTL = gsap.timeline({
+        repeat: -1,
+        paused: true,
+        yoyo: true,
+      });
+      ballTL.addPause();
+      ballTL.to(ballCity, 1, { x: 200, y: -40, scale: 0.9, rotate: 360, ease: 'ease: "slow(0.7, 0.7, false)"' });
+
+      ball.onclick = () => ballTL.play();
+    </script>
+  </body>
+</html>
